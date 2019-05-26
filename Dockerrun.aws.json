@@ -5,24 +5,27 @@
     "name": "client",
     "image": "haseemsaeed1/multi-client",
     "hostname": "client",
-    "essential": false
+    "essential": false,
+    "memory": 128
    },
   {
     "name": "server",
     "image": "haseemsaeed1/multi-server",
     "hostname": "api",
-    "essential": false
+    "essential": false,
+    "memory": 128
   },
 
   {
    "name": "worker",
    "image": "haseemsaeed1/multi-worker",
    "hostname": "worker",
-   "essential": false
+   "essential": false,
+   "memory": 128
   },
   
   {
- "name": "nginx",
+   "name": "nginx",
    "image": "haseemsaeed1/multi-nginx",
    "hostname": "nginx",
    "essential": true,
@@ -32,7 +35,8 @@
        "containerPort": 80
      }
     ],
-    "links": ["client", "server"]
+    "links": ["client", "server"],
+    "memory": 128
   }
   ]
 
